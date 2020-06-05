@@ -1,0 +1,6 @@
+/.idea/
+/bin/
+/composer.lock
+/vendor/
+/custom.task.properties
+/custom.type.properties

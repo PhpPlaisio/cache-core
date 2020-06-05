@@ -1,0 +1,38 @@
+{
+  "name": "plaisio/cache-core",
+  "description": "PhpPlaisio: Core Cache",
+  "keywords": [
+    "PhpPlaisio",
+    "Cache",
+    "Core"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.3",
+    "plaisio/cache": "dev-master",
+    "plaisio/company-resolver-uni": "^2.0",
+    "plaisio/console": "^2.2",
+    "plaisio/event": "^2.0",
+    "plaisio/kernel": "^3.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "plaisio/phing-extensions": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Plaisio\\Cache\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Plaisio\\Cache\\Test\\": "test/"
+    }
+  },
+  "config": {
+    "bin-dir": "bin/",
+    "sort-packages": true
+  }
+}

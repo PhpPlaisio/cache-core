@@ -1,0 +1,28 @@
+<project name="PhpPlaisio: Core Menu" default="build" basedir=".">
+    <!-- Run composer update and executes various other updates -->
+    <target name="update">
+        <exec command="composer update" checkreturn="true" passthru="true"/>
+        <phing phingfile="build.xml" target="kernel" haltonfailure="true"/>
+    </target>
+
+    <target name="kernel">
+        <exec executable="bin/plaisio" checkreturn="true" passthru="true">
+            <arg value="--ansi"/>
+            <arg value="plaisio:kernel-properties"/>
+        </exec>
+        <exec executable="bin/plaisio" checkreturn="true" passthru="true">
+            <arg value="--ansi"/>
+            <arg value="plaisio:kernel-property-read-write"/>
+            <arg value="company"/>
+        </exec>
+    </target>
+
+    <!-- Runs all unit tests -->
+    <target name="unit">
+        <exec command="bin/phpunit" passthru="true" checkreturn="true"/>
+    </target>
+
+    <target name="build">
+        <echo message=""/>
+    </target>
+</project>

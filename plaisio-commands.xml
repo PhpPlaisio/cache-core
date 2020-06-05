@@ -1,0 +1,3 @@
+<commands>
+    <command name="plaisio:cache-flush-all">\Plaisio\Cache\Command\FlushAllCacheCommand</command>
+</commands>
