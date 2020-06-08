@@ -63,7 +63,7 @@ class FlushAllCacheCommand extends PlaisioCommand
       return 0;
     }
 
-    if ($$company!==null)
+    if ($company!==null)
     {
       $cmpId = $this->nub->DL->abcCompanyGetCmpIdByCmpAbbr($company);
       if ($cmpId===null)
