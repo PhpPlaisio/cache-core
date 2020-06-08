@@ -56,11 +56,14 @@ class FlushAllCacheCommand extends PlaisioCommand
       return 0;
     }
 
+    if (!$this->nub->DL->isAlive())
+    {
+      $this->nub->DL->connect();
+    }
+
     if ($all)
     {
       $this->forAllCompanies();
-
-      return 0;
     }
 
     if ($company!==null)
@@ -73,7 +76,7 @@ class FlushAllCacheCommand extends PlaisioCommand
         return -1;
       }
 
-      $this->forSingleCompany($cmpId);
+      $this->forCompany($cmpId);
     }
 
     return 0;
@@ -85,15 +88,11 @@ class FlushAllCacheCommand extends PlaisioCommand
    */
   private function forAllCompanies(): void
   {
-    $this->nub->DL->connect();
-
     $companies = $this->nub->DL->abcCompanyGetAll();
     foreach ($companies as $company)
     {
       $this->forCompany($company['cmp_id']);
     }
-
-    $this->nub->DL->disconnect();
   }
 
   //--------------------------------------------------------------------------------------------------------------------
@@ -109,37 +108,6 @@ class FlushAllCacheCommand extends PlaisioCommand
     $this->nub->eventDispatcher->notify(new FlushAllCacheEvent());
     $this->nub->eventDispatcher->dispatch();
     $this->nub->DL->commit();
-  }
-
-  //--------------------------------------------------------------------------------------------------------------------
-  /**
-   * Flushes all caches for a single company.
-   *
-   * @param string $company The abbreviation of the company.
-   *
-   * @return int
-   */
-  private function forSingleCompany(string $company): int
-  {
-    $ret = 0;
-
-    $this->nub->DL->connect();
-
-    $cmpId = $this->nub->DL->abcCompanyGetCmpIdByCmpAbbr($company);
-    if ($cmpId===null)
-    {
-      $this->io->error(sprintf("Unknown company '%s'.", $company));
-
-      $ret = -1;
-    }
-    else
-    {
-      $this->forCompany($cmpId);
-    }
-
-    $this->nub->DL->disconnect();
-
-    return $ret;
   }
 
   //--------------------------------------------------------------------------------------------------------------------
