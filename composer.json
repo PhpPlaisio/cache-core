@@ -9,7 +9,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.3",
-    "plaisio/cache": "dev-master",
+    "plaisio/cache": "1.0",
     "plaisio/company-resolver-uni": "^2.0",
     "plaisio/console": "^2.2",
     "plaisio/event": "^2.0",
