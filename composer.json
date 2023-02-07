@@ -26,11 +26,6 @@
       "Plaisio\\Cache\\": "src/"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Plaisio\\Cache\\Test\\": "test/"
-    }
-  },
   "config": {
     "bin-dir": "bin/",
     "sort-packages": true,
