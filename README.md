@@ -22,12 +22,6 @@
 <a href="https://packagist.org/packages/plaisio/cache-core"><img src="https://poser.pugx.org/plaisio/cache-core/v/stable" alt="Latest Stable Version"/></a>
 </td>
 <td>
-<a href="https://travis-ci.org/PhpPlaisio/cache-core"><img src="https://travis-ci.org/PhpPlaisio/cache-core.svg?branch=master" alt="Build Status"/></a><br/>
-<a href="https://scrutinizer-ci.com/g/PhpPlaisio/cache-core/?branch=master"><img src="https://scrutinizer-ci.com/g/PhpPlaisio/cache-core/badges/coverage.png?b=master" alt="Code Coverage"/></a>
-</td>
-<td>
-<a href="https://scrutinizer-ci.com/g/PhpPlaisio/cache-core/?branch=master"><img src="https://scrutinizer-ci.com/g/PhpPlaisio/cache-core/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/></a>
-</td>
 </tr>
 </tbody>
 </table>

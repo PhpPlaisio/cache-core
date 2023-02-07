@@ -43,7 +43,7 @@ class FlushAllCacheCommand extends PlaisioCommand
    *
    * @return int
    */
-  protected function execute(InputInterface $input, OutputInterface $output)
+  protected function execute(InputInterface $input, OutputInterface $output): int
   {
     $company = Cast::toOptString($input->getArgument('company'));
     $all     = Cast::toManBool($input->getOption('all'));
