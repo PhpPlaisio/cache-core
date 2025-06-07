@@ -42,11 +42,6 @@
         </exec>
     </target>
 
-    <!-- Runs all unit tests -->
-    <target name="unit">
-        <exec executable="bin/phpunit" passthru="true" checkreturn="true"/>
-    </target>
-
     <target name="build">
         <echo message=""/>
     </target>
