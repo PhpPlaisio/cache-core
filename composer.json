@@ -9,11 +9,11 @@
   "license": "MIT",
   "require": {
     "php": ">=8.3",
-    "plaisio/cache": "1.1.0",
-    "plaisio/company-resolver-uni": "^2.1.1",
-    "plaisio/console": "^3.0.0",
-    "plaisio/event": "^3.0.0",
-    "plaisio/kernel": "^3.2.1"
+    "plaisio/cache": "^1.2.0",
+    "plaisio/company-resolver-uni": "^2.2.0",
+    "plaisio/console": "^3.1.1",
+    "plaisio/event": "^3.1.0",
+    "plaisio/kernel": "^3.3.0"
   },
   "require-dev": {
     "phing/phing": "^3.0.1",
